@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane id="login-container" prefWidth="400" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.PrijavaController">
+    <stylesheets>
+        <URL value="@/css/login.css" />
+    </stylesheets>
+    <Label maxWidth="1.7976931348623157E308" text="Korisničko ime" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="korisnickoIme" maxWidth="1.7976931348623157E308" promptText="Korisničko ime" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label maxWidth="1.7976931348623157E308" text="Šifra" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <PasswordField fx:id="sifra" maxWidth="1.7976931348623157E308" promptText="Šifra" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Hyperlink onAction="#pritisniRegistrujteSe" styleClass="register-text" text="Nemate profil? Registrujte se" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+    <Button onAction="#pritisniPrijaviteSe" maxWidth="1.7976931348623157E308" styleClass="button" text="Prijavite se" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+    <columnConstraints>
+        <ColumnConstraints prefWidth="200" />
+        <ColumnConstraints prefWidth="200" />
+    </columnConstraints>
+</GridPane>

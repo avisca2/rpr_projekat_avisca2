@@ -1,0 +1,27 @@
+#app-container {
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-background-color: white;
+}
+
+#tab-todo-statusi {
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+#tab-todo-stavke {
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.odjava {
+    -fx-background-color: #FF2E2E;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.crveni-tekst {
+    -fx-text-fill: #FF2E2E;
+}

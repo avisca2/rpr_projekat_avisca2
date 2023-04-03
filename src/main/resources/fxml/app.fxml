@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane id="app-container" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/app.css" />
+    </stylesheets>
+    <Label maxWidth="1.7976931348623157E308" text="Todo aplikacija" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Button maxWidth="1.7976931348623157E308" onAction="#klikniOdjava" styleClass="odjava" text="Odjava" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+    <TabPane maxWidth="1.7976931348623157E308" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+        <Tab closable="false" text="Todo statusi">
+            <GridPane id="tab-todo-statusi" maxWidth="1.7976931348623157E308">
+                <Label text="Panel za kreiranje Todo statusa" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="0" maxWidth="1.7976931348623157E308" />
+                <TableView fx:id="todoStatusiTabela" maxWidth="1.7976931348623157E308" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn fx:id="todoStatusIdKolona" prefWidth="100" text="Id" />
+                        <TableColumn fx:id="todoStatusNazivKolona" prefWidth="400" text="Naziv" />
+                    </columns>
+                </TableView>
+                <Button maxWidth="1.7976931348623157E308" onAction="#klikniDodajTodoStatus" text="Dodaj" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button maxWidth="1.7976931348623157E308" onAction="#klikniAzurirajTodoStatus" text="Ažuriraj" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button maxWidth="1.7976931348623157E308" onAction="#klikniObrisiTodoStatus" text="Obriši" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <columnConstraints>
+                <ColumnConstraints prefWidth="150" />
+                <ColumnConstraints prefWidth="150" />
+                <ColumnConstraints prefWidth="150" />
+                <ColumnConstraints prefWidth="150" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </Tab>
+        <Tab closable="false" text="Todo stavke">
+            <GridPane id="tab-todo-stavke" >
+                <Label text="Panel za kreiranje Todo stavki" fx:id="todoStavkaPoruka" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="0" maxWidth="1.7976931348623157E308" />
+                <TableView fx:id="todoStavkeTabela" maxWidth="1.7976931348623157E308" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn prefWidth="100" fx:id="todoStavkaIdKolona" text="Id" />
+                        <TableColumn prefWidth="125" fx:id="todoStavkaNazivKolona" text="Naziv" />
+                        <TableColumn prefWidth="125" fx:id="todoStavkaTipKolona" text="Tip" />
+                        <TableColumn prefWidth="125" fx:id="todoStavkaStatusKolona" text="Status" />
+                    </columns>
+                </TableView>
+                <Button fx:id="todoStavkaDodajDugme" onAction="#klikniDodajTodoStavku" maxWidth="1.7976931348623157E308" text="Dodaj" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="todoStavkaAzurirajDugme" onAction="#klikniAzurirajTodoStavku"  maxWidth="1.7976931348623157E308" text="Ažuriraj" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button fx:id="todoStavkaObrisiDugme" onAction="#klikniObrisiTodoStavku"  maxWidth="1.7976931348623157E308" text="Obriši" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="150" />
+                    <ColumnConstraints prefWidth="150" />
+                    <ColumnConstraints prefWidth="150" />
+                    <ColumnConstraints prefWidth="150" />
+                </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </Tab>
+    </TabPane>
+    <columnConstraints>
+        <ColumnConstraints prefWidth="200" />
+        <ColumnConstraints prefWidth="200" />
+        <ColumnConstraints prefWidth="200" />
+    </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

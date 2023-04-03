@@ -1,0 +1,19 @@
+#login-container {
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-background-color: white;
+}
+
+.register-text {
+    -fx-font-size: 10px;
+    -fx-underline: true;
+    -fx-text-fill: #00008B;
+    -fx-cursor: hand;
+}
+
+.button {
+    -fx-background-color: #90EE90;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
